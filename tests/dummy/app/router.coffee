@@ -6,5 +6,6 @@ Router = Ember.Router.extend
 
 Router.map ->
   @resource 'blogy/posts', ->
+    @route 'show', path: ':post_id', ->
 
 `export default Router`
