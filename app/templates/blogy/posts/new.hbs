@@ -1,0 +1,16 @@
+{{ content.title }}
+
+{{#form-for model}}
+  {{input published as='checkbox'}}
+  {{input draft as='checkbox'}}
+  {{input title}}
+  {{input locale as='select' collection='controller.availableLocales'}}
+  {{input slug}}
+  {{input storage as='select' collection='controller.availableStorages'}}
+  {{input format as='select' collection='controller.availableFormats'}}
+  {{input remote}}
+  {{input text as='text'}}
+  {{submit}}
+{{/form-for}}
+
+{{outlet}}

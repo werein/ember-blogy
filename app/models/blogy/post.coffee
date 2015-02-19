@@ -7,8 +7,13 @@ BlogyPost = DS.Model.extend {
   title: DS.attr()
   locale: DS.attr()
   slug: DS.attr()
+  storage: DS.attr()
+  format: DS.attr()
+  document: DS.attr()
+  remote: DS.attr()
   text: DS.attr()
   content: DS.attr()
+  plain: DS.attr()
   createdAt: DS.attr()
   updatedAt: DS.attr()
 }
