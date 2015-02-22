@@ -18,6 +18,9 @@ var app = new EmberAddon();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-app.import('bower_components/ember-easyform/dist/ember-easyform.js');
+if (app.env === 'development') {
+  app.import('bower_components/ember-easyform/dist/ember-easyform.js');
+  app.import('bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss');
+}
 
 module.exports = app.toTree();

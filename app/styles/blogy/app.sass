@@ -1,0 +1,70 @@
+@import bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap
+
+.ember-application > .ember-view
+  > nav
+    @extend .navbar !optional
+    @extend .navbar-default !optional
+    @extend .navbar-fixed-top !optional
+    > .content
+      @extend .container !optional
+      > header
+        @extend .navbar-header !optional
+        .brand
+          @extend .navbar-brand !optional
+        button
+          @extend .navbar-toggle !optional
+          @extend .collapsed !optional
+      > ul
+        @extend .collapse !optional
+        @extend .navbar-collapse !optional
+        @extend .nav !optional
+        @extend .navbar-nav !optional
+
+#outlet
+  @extend .container !optional
+  margin-top: 70px
+
+.editor
+  background: rgba(252, 252, 252, 0.95)
+  position: fixed
+  right: 0
+  bottom: 0
+  width: 75%
+  height: 50%
+  border: solid 2px rgba(12, 22, 32, 0.8)
+  border-bottom: none
+  border-right: none
+  overflow-x: scroll
+  padding: 15px
+  form
+    @extend .form-horizontal !optional
+  .field
+    @extend .form-group !optional
+    padding-right: 15px
+    label
+      @extend .col-sm-3
+      @extend .col-md-2
+      @extend .control-label !optional
+      font-weight: 200
+    input, textarea
+      @extend .col-sm-9
+      @extend .col-md-10
+      padding-left: 5px
+      padding-right: 5px
+      &.ember-checkbox
+        width: auto
+        top: 6px
+    select
+      &.ember-select
+        margin-top: 6px
+  .submit
+    @extend .btn
+    @extend .btn-default
+    @extend .btn-block
+    margin-bottom: 15px
+
+article
+  &.is-dirty
+    background: orange
+  &.is-new
+    background: green

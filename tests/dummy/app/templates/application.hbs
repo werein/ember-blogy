@@ -1,3 +1,17 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<nav>
+  <div class="content">
+    <header>
+      <div class="brand"> Blogy </div>
+      <button> Open </button>
+    </header>
+    <ul>
+      <li>{{#link-to 'index'}} Home {{/link-to}}</li>
+      <li>{{#link-to 'blogy/posts'}} Blogy {{/link-to}}</li>
+      <li>{{#link-to 'blogy/posts.new'}} New post {{/link-to}}</li>
+    </ul>
+  </div>
+</nav>
 
-{{outlet}}
+<div id="outlet">
+  {{outlet}}
+</div>

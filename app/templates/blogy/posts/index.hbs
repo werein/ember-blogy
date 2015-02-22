@@ -1,5 +1,3 @@
-{{#each post in model}}
-  {{post.title}}
-{{/each}}
+{{each post in model itemView='blogy/posts/post'}}
 
 {{outlet}}

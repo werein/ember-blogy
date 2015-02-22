@@ -1,6 +1,13 @@
-{{#link-to 'blogy/post.edit' this}} Edit {{/link-to}}
 
-{{ title }}
-{{{ content.content }}}
+{{#link-to 'blogy/posts'}} All {{/link-to}}
+{{#link-to 'blogy/post.edit' this}} Edit {{/link-to}}
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <div class="content">
+    {{{ content.content }}}
+  </div>
+</article>
 
 {{outlet}}

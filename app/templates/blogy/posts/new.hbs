@@ -1,16 +1,25 @@
-{{ content.title }}
+<article>
+  <header>
+    <h1>{{ content.title }}</h1>
+  </header>
+  <div class="content">
+    {{{ content.text }}}
+  </div>
+</article>
 
-{{#form-for model}}
-  {{input published as='checkbox'}}
-  {{input draft as='checkbox'}}
-  {{input title}}
-  {{input locale as='select' collection='controller.availableLocales'}}
-  {{input slug}}
-  {{input storage as='select' collection='controller.availableStorages'}}
-  {{input format as='select' collection='controller.availableFormats'}}
-  {{input remote}}
-  {{input text as='text'}}
-  {{submit}}
-{{/form-for}}
+<div class="editor">
+  {{#form-for model}}
+    {{input published as='checkbox' class='field'}}
+    {{input draft as='checkbox' class='field'}}
+    {{input title class='field'}}
+    {{input locale as='select' collection='controller.availableLocales' class='field'}}
+    {{input slug class='field'}}
+    {{input storage as='select' collection='controller.availableStorages' class='field'}}
+    {{input format as='select' collection='controller.availableFormats' class='field'}}
+    {{input remote class='field'}}
+    {{input text as='text' class='field'}}
+    {{submit class='submit'}}
+  {{/form-for}}
+</div>
 
 {{outlet}}
