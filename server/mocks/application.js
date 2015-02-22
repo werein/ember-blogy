@@ -11,6 +11,15 @@ module.exports = function(app) {
             'list': 'List',
             'new': 'New post'
           }
+        },
+        'blogy': {
+          'post': {
+            'edit': {
+              'all': 'View all',
+              'edit': 'Edit',
+              'view': 'View'
+            }
+          }
         }
       }
     });

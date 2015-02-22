@@ -1,6 +1,11 @@
+<nav class="edit">
+  <ul>
+    <li>{{#link-to 'blogy/posts'}} {{t 'ui.blogy.post.edit.all'}} {{/link-to}}</li>
+    <li>{{#link-to 'blogy/post' this}} {{t 'ui.blogy.post.edit.view'}} {{/link-to}}</li>
+    <li>{{#link-to 'blogy/post.edit' this}} {{t 'ui.blogy.post.edit.edit'}} {{/link-to}}</li>
+  </ul>
+</nav>
 
-{{#link-to 'blogy/posts'}} All {{/link-to}}
-{{#link-to 'blogy/post.edit' this}} Edit {{/link-to}}
 <article>
   <header>
     <h1>{{ title }}</h1>
