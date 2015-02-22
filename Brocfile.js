@@ -21,6 +21,8 @@ var app = new EmberAddon();
 if (app.env === 'development') {
   app.import('bower_components/ember-easyform/dist/ember-easyform.js');
   app.import('bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss');
+  app.import('bower_components/ember-i18n/lib/i18n.js');
+  app.import('bower_components/ember-i18n/lib/i18n-plurals.js');
 }
 
 module.exports = app.toTree();
