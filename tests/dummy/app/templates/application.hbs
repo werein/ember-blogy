@@ -7,7 +7,9 @@
     <ul>
       <li>{{#link-to 'index'}} {{ t 'ui.application.nav.home' }} {{/link-to}}</li>
       <li>{{#link-to 'blogy/posts'}} {{ t 'ui.application.nav.list' }} {{/link-to}}</li>
-      <li>{{#link-to 'blogy/posts.new'}} {{ t 'ui.application.nav.new' }} {{/link-to}}</li>
+      {{#if (can "create blogy/post")}}
+        <li>{{#link-to 'blogy/posts.new'}} {{ t 'ui.application.nav.new' }} {{/link-to}}</li>
+      {{/if}}
     </ul>
   </div>
 </nav>

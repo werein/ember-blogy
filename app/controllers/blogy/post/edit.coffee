@@ -5,7 +5,7 @@ BlogyPostEditController = Ember.Controller.extend
   availableStorages: ['text', 'remote']
   availableFormats: ['html', 'markdown']
   actions:
-    submit: ->
+    save: ->
       @model.save()
 
 `export default BlogyPostEditController`

@@ -5,9 +5,16 @@ BlogyPostsNewController = Ember.Controller.extend
   availableStorages: ['text', 'remote']
   availableFormats: ['html', 'markdown']
   actions:
-    submit: ->
-      that = @
+    saveAndEdit: ->
+      _ = @
       @model.save().then ->
-        that.transitionToRoute 'blogy/post.edit', that.model
+        _.transitionToRoute 'blogy/post.edit', _.model
+    saveAndShow: ->
+      _ = @
+      @model.save().then ->
+        _.transitionToRoute 'blogy/post.show', _.model
+    saveAndNew: ->
+      @model.save().then ->
+        _.transitionToRoute 'blogy/posts.new'
 
 `export default BlogyPostsNewController`

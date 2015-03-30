@@ -1,18 +1,1 @@
-<nav class="edit">
-  <ul>
-    <li>{{#link-to 'blogy/posts'}} {{t 'ui.blogy.post.edit.all'}} {{/link-to}}</li>
-    <li>{{#link-to 'blogy/post' this}} {{t 'ui.blogy.post.edit.view'}} {{/link-to}}</li>
-    <li>{{#link-to 'blogy/post.edit' this}} {{t 'ui.blogy.post.edit.edit'}} {{/link-to}}</li>
-  </ul>
-</nav>
-
-<article>
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
-  <div class="content">
-    {{{ content.content }}}
-  </div>
-</article>
-
 {{outlet}}

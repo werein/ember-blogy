@@ -1,25 +1,82 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Post settings</div>
+  <div class="panel-body">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Title</label>
+        <div class="col-sm-10">
+          {{input type="text" value=content.title placeholder="Title" required=true class='field'}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Locale</label>
+        <div class="col-sm-10">
+          {{view "select" value=content.locale content=controller.availableLocales class='field'}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Storage</label>
+        <div class="col-sm-10">
+          {{view "select" value=content.storage content=controller.availableStorages class='field'}}
+          {{#if content.isRemote }}
+            {{input type="text" value=content.remote class='field'}}
+          {{/if}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Format</label>
+        <div class="col-sm-10">
+          {{view "select" value=content.format content=controller.availableFormats class='field'}}
+        </div>
+      </div>
+      {{#if content.isText }}
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Text</label>
+          <div class="col-sm-10">
+            {{textarea value=content.text placeholder="Text" class='field'}}
+          </div>
+        </div>
+      {{/if}}
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label>
+              {{input type="checkbox" checked=content.published class='field'}} Published
+            </label>
+          </div>      
+          <div class="checkbox">
+            <label>
+              {{input type="checkbox" checked=content.draft class='field'}} Draft
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" {{ action 'saveAndEdit' }}>Save</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a {{ action 'saveAndShow' }}>save and show</a></li>
+              <li><a {{ action 'saveAndNew' }}>save and add another</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
 <article>
   <header>
     <h1>{{ content.title }}</h1>
   </header>
   <div class="content">
-    {{{ content.text }}}
+    {{blogy-wysiwyg content=content.text}}
   </div>
 </article>
-
-<div class="editor">
-  {{#form-for model}}
-    {{input published as='checkbox' class='field'}}
-    {{input draft as='checkbox' class='field'}}
-    {{input title class='field'}}
-    {{input locale as='select' collection='controller.availableLocales' class='field'}}
-    {{input slug class='field'}}
-    {{input storage as='select' collection='controller.availableStorages' class='field'}}
-    {{input format as='select' collection='controller.availableFormats' class='field'}}
-    {{input remote class='field'}}
-    {{input text as='text' class='field'}}
-    {{submit class='submit'}}
-  {{/form-for}}
-</div>
 
 {{outlet}}
