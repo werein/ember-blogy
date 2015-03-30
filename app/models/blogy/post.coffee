@@ -13,9 +13,14 @@ BlogyPost = DS.Model.extend {
   remote: DS.attr()
   text: DS.attr()
   content: DS.attr()
-  plain: DS.attr()
   createdAt: DS.attr()
   updatedAt: DS.attr()
+  isRemote: (->
+    @get('storage') == 'remote'
+  ).property('storage')
+  isText: (->
+    @get('storage') == 'text'
+  ).property('storage')
 }
 
 `export default BlogyPost`
