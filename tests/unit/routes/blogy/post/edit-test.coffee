@@ -1,10 +1,10 @@
 `import { test, moduleFor } from 'ember-qunit'`
 
-moduleFor 'route:blogy/posts', 'BlogyPostsRoute', {
+moduleFor 'route:blogy/post/edit', {
   # Specify the other units that are required for this test.
   # needs: ['controller:foo']
 }
 
-test 'it exists', ->
+test 'it exists', (assert) ->
   route = @subject()
-  ok route
+  assert.ok route
