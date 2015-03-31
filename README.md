@@ -1,38 +1,7 @@
-# Blogy
+# Ember-blogy
 
-[![Build Status][travis-badge]][travis] [![Code Climate][code-climate-badge]][code-climate] [![Test coverage][coverage-badge]][coverage] [![Gem Version][version-badge]][version] [![Dependency Status][dependencies-badge]][dependencies] 
+[![Build Status](https://travis-ci.org/werein/ember-blogy.svg)](https://travis-ci.org/werein/ember-blogy)  [![Code Climate](https://codeclimate.com/github/werein/ember-blogy/badges/gpa.svg)](https://codeclimate.com/github/werein/ember-blogy) [![Test coverage](https://codeclimate.com/github/werein/ember-blogy/badges/coverage.svg)](https://codeclimate.com/github/werein/ember-blogy) [![Version](https://badge.fury.io/js/ember-blogy.svg)](https://badge.fury.io/js/ember-blogy) [![Dependencies](https://gemnasium.com/werein/ember-blogy.svg)](https://gemnasium.com/werein/ember-blogy)
 
-This README outlines the details of collaborating on this Ember addon.
+Blog addon working out-of-the-box with Blogy Engine for Rails.
 
-## Installation
-
-* `git clone` this repository
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
-
-[travis]: https://travis-ci.org/werein/ember-blogy
-[travis-badge]: https://travis-ci.org/werein/ember-blogy.svg
-[code-climate]: https://codeclimate.com/github/werein/ember-blogy
-[code-climate-badge]: https://codeclimate.com/github/werein/ember-blogy/badges/gpa.svg
-[coverage]: https://codeclimate.com/github/werein/ember-blogy
-[coverage-badge]: https://codeclimate.com/github/werein/ember-blogy/badges/coverage.svg
-[version]: http://badge.fury.io/js/ember-blogy
-[version-badge]: https://badge.fury.io/js/ember-blogy.svg
-[dependencies]: https://gemnasium.com/werein/ember-blogy
-[dependencies-badge]: ttps://gemnasium.com/werein/ember-blogy.svg
+Only thing you need to do is setup router and create proper permission, by default is allowed to list, create and edit posts without restrictions.
