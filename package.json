@@ -1,7 +1,7 @@
 {
   "name": "ember-blogy",
-  "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.1",
+  "description": "Blog addon working out-of-the-box with Blogy Engine for Rails.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "We're in s.r.o.",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
