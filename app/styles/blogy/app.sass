@@ -1,0 +1,73 @@
+$fa-font-path: "/assets/fonts/fontawesome"
+
+@import bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap
+@import bower_components/fontawesome/scss/font-awesome
+@import summernote-bs3
+
+.ember-application > .ember-view
+  > nav
+    @extend .navbar !optional
+    @extend .navbar-default !optional
+    @extend .navbar-fixed-top !optional
+    > .content
+      @extend .container !optional
+      > header
+        @extend .navbar-header !optional
+        .brand
+          @extend .navbar-brand !optional
+        button
+          @extend .navbar-toggle !optional
+          @extend .collapsed !optional
+      > ul
+        @extend .collapse !optional
+        @extend .navbar-collapse !optional
+        @extend .nav !optional
+        @extend .navbar-nav !optional
+
+#outlet
+  @extend .container !optional
+  margin-top: 70px
+
+.editor
+  form
+    @extend .form-horizontal !optional
+  .field
+    @extend .form-group !optional
+    padding-right: 15px
+    label
+      @extend .col-sm-3
+      @extend .col-md-2
+      @extend .control-label !optional
+      font-weight: 200
+    input, textarea
+      @extend .col-sm-9
+      @extend .col-md-10
+      padding-left: 5px
+      padding-right: 5px
+      &.ember-checkbox
+        width: auto
+        top: 6px
+    select
+      &.ember-select
+        margin-top: 6px
+  .submit
+    @extend .btn
+    @extend .btn-default
+    @extend .btn-block
+    margin-bottom: 15px
+
+.edit
+  ul
+    @extend .nav !optional
+    @extend .nav-tabs !optional
+
+article
+  +make-row
+  header, .content
+    +make-xs-column(12)
+  h2
+    margin-top: 10px
+  &.is-dirty
+    border-left: solid 3px rgba(249, 191, 59, 1)
+  &.is-new
+    border-left: solid 3px rgba(46, 204, 113, 1)

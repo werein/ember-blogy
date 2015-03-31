@@ -2,6 +2,6 @@
 
 BlogyPostsIndexRoute = Ember.Route.extend
   model: ->
-    @store.find('blogy/post')
+    @store.findAll('blogy/post')
 
 `export default BlogyPostsIndexRoute`

@@ -1,0 +1,21 @@
+<nav class="edit">
+  <ul>
+    {{#if (can "list blogy/posts")}}
+      <li>{{#link-to 'blogy/posts'}} {{t 'ui.blogy.post.show.all'}} {{/link-to}}</li>
+    {{/if}}
+    {{#if (can "edit blogy/post" content)}}
+      <li>{{#link-to 'blogy/post.edit' this}} <i class='fa fa-edit'></i> {{t 'ui.blogy.post.show.edit'}} {{/link-to}}</li>
+    {{/if}}
+  </ul>
+</nav>
+
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <div class="content">
+    {{{ content.content }}}
+  </div>
+</article>
+
+{{outlet}}
